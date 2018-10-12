@@ -18,7 +18,7 @@ gulp.task('browserSync', function () {
       port: 3000,
       middleware: [apiProxy]
     },
-    startPath: '/top/top.html?isDev=true',
+    startPath: '/index/index.html',
   });
 });
 

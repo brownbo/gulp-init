@@ -4,7 +4,7 @@ const gulp = require('gulp');
 
 let knownOptions = {
   string: 'env',
-  default: { env: process.env.NODE_ENV || 'production' }
+  default: { env: process.env.NODE_ENV || 'dev' }
 };
 
 let options = minimist(process.argv.slice(2), knownOptions);

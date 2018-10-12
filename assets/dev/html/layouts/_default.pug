@@ -55,18 +55,19 @@ html(lang="ja-JP")
     div(
       class=page_class
     )
-      //- mixin
-      include /mixin/_item_b.pug
-      include /mixin/_list_select.pug
-      include /mixin/_breadcrumb.pug
-      include /mixin/_modal.pug
-      include /mixin/_modal_shop.pug
+    block content
+    //-   //- mixin
+    //-   include /mixin/_item_b.pug
+    //-   include /mixin/_list_select.pug
+    //-   include /mixin/_breadcrumb.pug
+    //-   include /mixin/_modal.pug
+    //-   include /mixin/_modal_shop.pug
 
-      include /includes/_header.pug
-      block content
-      include /includes/_footerl_navi.pug
-      include /includes/_footer.pug
+    //-   include /includes/_header.pug
+    //-   block content
+    //-   include /includes/_footerl_navi.pug
+    //-   include /includes/_footer.pug
 
-      + modal('x_modal_login','ログイン・新規登録', '', false)
-      + modal('modal_normal x_modal_normal','', '削除してもよろしいでしょうか？', true)
-    include /includes/_js.pug
+    //-   + modal('x_modal_login','ログイン・新規登録', '', false)
+    //-   + modal('modal_normal x_modal_normal','', '削除してもよろしいでしょうか？', true)
+    //- include /includes/_js.pug
