@@ -1,0 +1,38 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "パスワード再発行"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a page_news_list page_login')
+  - base_path = '../'
+  - headerType = '2'
+block content
+  .page_content.x_page_content
+    .x_scroll_content.scroll_content
+      .login_cont_wrap
+        h2.title_h
+          = page_name
+        div.login_suc_text
+          p 新しいパスワードを入力してください。
+        form(id="changePwForm" action="/")
+          .input_wrap.form_wrap
+            .input_row
+              input(type="password" placeholder="新しいパスワード（英数字8~20文字）" name="password" autocomplete="off" check="required compare" minlength="8" maxlength="20")
+            .input_row
+              input(type="password" placeholder="もう一度パスワードを入力してください" check="required compare" minlength="8" maxlength="20")
+            p.error_text 必須項目です。必ずご入力ください。
+          .login_submit_button
+            input(type="submit" value="登録する")

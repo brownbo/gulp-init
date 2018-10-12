@@ -1,0 +1,104 @@
+/* word break */
+%break {
+  word-break: break-all;
+}
+
+%nowrap {
+  white-space: nowrap;
+}
+
+%blod {
+  font-weight: bold;
+}
+
+%no-elps {
+  white-space: normal;
+  text-overflow: clip;
+  -webkit-line-clamp: initial;
+}
+
+/* single line ellipsis  */
+%elps {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* multi line ellipsis */
+%ml-elps {
+  @extend %elps;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; //default 4 line
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  &.line2 {
+    -webkit-line-clamp: 2; // 2 line
+  }
+  &.line3 {
+    -webkit-line-clamp: 3;
+  }
+  &.line4 {
+    -webkit-line-clamp: 4;
+  }
+  &.line5 {
+    -webkit-line-clamp: 5;
+  }
+  &.line6 {
+    -webkit-line-clamp: 6;
+  }
+  &.line7 {
+    -webkit-line-clamp: 7;
+  }
+  &.line8 {
+    -webkit-line-clamp: 8;
+  }
+  &.line9 {
+    -webkit-line-clamp: 9;
+  }
+}
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+%title-center {
+  .title {
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: bold;
+  }
+  h3.title {
+    font-size: 24px;
+  }
+  h4.title {
+    font-size: 16px;
+  }
+}
+
+%wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
+%button-hover{
+  transition: all .2s ease-in-out;
+  &:hover {
+    opacity: .6;
+  }
+}
+%link {
+  color: map-get($global-color, primary);
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+}

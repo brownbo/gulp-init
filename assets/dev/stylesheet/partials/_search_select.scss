@@ -1,0 +1,99 @@
+.search_select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 118px;
+  font-size: 13px;
+  text-align: left;
+  &.is_opened {
+    display: block;
+    .current {
+      &::after {
+        border-width: 0 4px 4px 4px;
+        border-color: transparent transparent #ccc transparent;
+      }
+    }
+    .select_list {
+      display: block;
+    }
+  }
+  .current {
+    position: relative;
+    height: 38px;
+    margin-top: 1px;
+    margin-bottom: 16px;
+    line-height: 38px;
+    border-right: 1px solid map-get($global-color, border-grey);
+    cursor: pointer;
+    text-align: center;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 3px;
+      top: 50%;
+      width: 0;
+      height: 0;
+      margin-top: -3px;
+      border-style: solid;
+      border-width: 4px 4px 0 4px;
+      border-color: #ccc transparent transparent transparent;
+    }
+  }
+  .select_list {
+    position: relative;
+    display: none;
+    padding: 0 8px;
+    border: 1px solid map-get($global-color, border-grey);
+    background-color: #fff;
+    border-radius: 6px;
+    z-index: 99;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 70%;
+      top: -7px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent map-get($global-color, border-grey) transparent;
+
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 70%;
+      top: -6px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 6px 6px 6px;
+      border-color: transparent transparent #fff transparent;
+
+    }
+    li {
+      height: 30px;
+      line-height: 30px;
+      + li {
+        border-top: 1px solid map-get($global-color, border-grey);
+      }
+      &:hover {
+        cursor: pointer;
+        color: map-get($global-color, primary);
+      }
+    }
+  }
+  + input {
+    padding-left: 126px !important;
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .search_select {
+    left: 24px;
+    .current {
+      height: 32px;
+      line-height: 32px;
+    }
+  }
+}

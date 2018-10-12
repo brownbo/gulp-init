@@ -1,0 +1,16 @@
+mixin list_select(dataList, pleaceholder)
+  - var text = pleaceholder || '並び替え'
+  .list_select_wrap.x_select_wrap
+    p.select_text(data-text=text)= text
+    ul.select_list.x_select_list
+      - dataList.forEach(function(item) {
+      li(data-id=item.value)= item.name
+      - })
+    i
+  .list_select_com_wrap.x_select_list
+    select
+      option(value="" selected)= text
+      - dataList.forEach(function(item) {
+      option(value=item.value)= item.name
+      - })
+    i

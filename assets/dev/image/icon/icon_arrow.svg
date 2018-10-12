@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.001 22.001">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #4eaff9;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #4eaff9;
+      }
+    </style>
+  </defs>
+  <g id="Group" transform="translate(27.583 22.584) rotate(-90)">
+    <g id="Page_1_Copy_8" data-name="Page 1 Copy 8" transform="translate(22.084 -27.083) rotate(90)">
+      <circle id="Oval_2" data-name="Oval 2" class="cls-1" cx="10.5" cy="10.5" r="10.5"/>
+      <path id="Path" class="cls-2" d="M.5,0A.484.484,0,0,0,.148.16a.578.578,0,0,0,0,.771L5.465,6.682.148,12.433a.578.578,0,0,0,0,.771.478.478,0,0,0,.713,0L6.534,7.068a.578.578,0,0,0,0-.771L.861.16A.484.484,0,0,0,.5,0" transform="translate(8.591 3.818)"/>
+    </g>
+  </g>
+</svg>

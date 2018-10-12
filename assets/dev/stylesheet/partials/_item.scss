@@ -1,0 +1,402 @@
+.item_a {
+  display: flex;
+  overflow: hidden;
+  border-top: 1px solid map-get($global-color, border-light);
+  border-radius: 6px;
+  box-shadow: 0 8px 8px 4px #F0F0F0;
+  &.swiper-slide {
+    height: auto;
+  }
+  .item_wrapper {
+    background-color: #fff;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    &:hover {
+      .cover {
+        opacity: 1;
+      }
+    }
+  }
+  .visual {
+    height: 240px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+  .visual_video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 240px;
+    background-color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+  }
+  .hoge {
+    .detail {
+      padding: 16px 10px;
+    }
+    .title {
+      padding-bottom: 0 !important;
+      margin-bottom: 8px !important;
+      cursor: pointer;
+    }
+    .text {
+      max-height: 48px;
+      font-size: map-get($global-font-size, pc-h3);
+      font-weight: bold;
+      line-height: 25px;
+      word-wrap: break-word;
+      overflow: hidden;
+    }
+    .time {
+      padding: 4px 0;
+      text-align: right;
+      font-size: 12px;
+      color: map-get($global-color, light-grey);
+    }
+    .area_list {
+      & > .item {
+        display: inline-block;
+        margin-bottom: 8px;
+        margin-right: 8px;
+        border-radius: 8px;
+        padding: 4px 8px;
+        font-size: 12px;
+        line-height: 1;
+        background-color: map-get($global-color, primary);
+        cursor: pointer;
+        color: #fff;
+        &.is_all {
+          background-color: #4CBDFC;
+        }
+        &.is_Hokkaido {
+          background-color: #91E4EF;
+        }
+        &.is_Tohoku {
+          background-color: #ff5a50;
+        }
+        &.is_Kanto {
+          background-color: #47cd84;
+        }
+        &.is_Hokuriku {
+          background-color: #9f9bff;
+        }
+        &.is_Tokai {
+          background-color: #4682b4;
+        }
+        &.is_Kansai {
+          background-color: #efa1b5;
+        }
+        &.is_Sanin {
+          background-color: #2e8b57;
+        }
+        &.is_Sanyo {
+          background-color: #ffcb85;
+        }
+        &.is_Shikoku {
+          background-color: #cf9bff;
+        }
+        &.is_Kyushu {
+          background-color: #abe2bf;
+        }
+        &.is_Okinawa {
+          background-color: #FF79A6;
+        }
+
+      }
+    }
+  }
+  .cover {
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity map-get($global-animation-speed, a) ease-in-out;
+    cursor: pointer;
+    .title {
+      width: 100%;
+      max-height:42px;
+      overflow: hidden;
+      font-size: map-get($global-font-size, pc-h3);
+      word-break: normal;
+      line-height: 1.2;
+    }
+    .description {
+      font-size: 12px;
+      width: 100%;
+      padding-top: 16px;
+      word-wrap: break-word;
+      line-height: 20px;
+      max-height: 76px;
+      overflow: hidden;
+    }
+  }
+  .news_status_wrap {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-left: 50px solid #ff5a50;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+      border-right: 0;
+      transform: rotateZ(-45deg) translate(60%, -18%);
+    }
+    span {
+      position: absolute;
+      top: 10px;
+      right: 2px;
+      font-size: 16px;
+      transform: rotateZ(45deg);
+      color: #fff;
+    }
+  }
+}
+
+.item_b {
+  & > a {
+    display: flex;
+    align-items: center;
+  }
+  .visual {
+    min-width: 160px;
+    width: 175px;
+    height: 100px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  .detail {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  .visual_video_wrap {
+    position: relative;
+    margin-right: 10px;
+    .visual_video {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      img {
+        width: 20%;
+      }
+    }
+    .visual {
+      margin-right: 0;
+    }
+  }
+  .title {
+    font-size: 18px;
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+  }
+  .tag_list {
+    text-align: left;
+    & > .item {
+      font-size: 12px;
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+  }
+  .rank_num {
+    width: 100%;
+    img {
+      display: inline-block;
+      width: 34px;
+    }
+    span {
+      vertical-align: super;
+      font-size: 18px;
+    }
+    .color_1 {
+      color: map-get($global-color, rank-yellow);
+    }
+    .color_2 {
+      color: map-get($global-color, rank-grey);
+    }
+    .color_3 {
+      color: map-get($global-color, rank-brown);
+    }
+  }
+  .rank_label {
+    display: none;
+  }
+}
+
+.my_item_li {
+  .item_btn_wrap {
+    display: flex;
+    align-items: flex-start;
+    .area_list {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      line-height: 30px;
+      flex-wrap: wrap;
+      .item {
+        padding: 6px 8px;
+      }
+    }
+    .like_btn {
+      display: inline-block;
+      min-width: 60px;
+      padding: 0 10px;
+      height: 24px;
+      line-height: 24px;
+      border: 1px solid #4eaff9;
+      border-radius: map-get($global-radius, b);
+      text-align: center;
+      @extend %button-hover;
+      span {
+        position: relative;
+        top: -2px;
+        color: #4EAFF9;
+        font-size: 12px;
+        display: inline-block;
+        padding-left: 18px;
+        background: url("../image/icon/like.svg") left center no-repeat;
+        background-size: auto 13px;
+      }
+      span.liked {
+        background: url("../image/icon/like_active.svg") left center no-repeat;
+        background-size: auto 13px;
+      }
+    }
+  }
+  .checkbox_wrap {
+    position: absolute;
+    display: none;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.show_sp {
+  .item_b {
+    .visual_video_wrap {
+      margin-right: 0;
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .item_a {
+    .item_wrapper {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+    }
+    .visual_video {
+      height: 200px;
+    }
+    .visual {
+      height: 200px;
+      width: 100%;
+    }
+    .hoge {
+      .detail {
+        padding: 16px;
+      }
+      .title {
+        font-size: map-get($global-font-size, sp-h3);
+      }
+    }
+    .cover {
+      display: none;
+    }
+  }
+  .item_b {
+    & > a {
+      display: block;
+    }
+    .visual {
+      min-width: 100%;
+      width: 100%;
+      margin-right: 0;
+      padding-top: 58%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .visual_video_wrap {
+      position: relative;
+      margin-right: 0;
+      .visual_video {
+        img {
+          width: 15%;
+        }
+      }
+    }
+    .detail {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+    }
+    .title {
+      font-size: 14px;
+    }
+    .tag_list {
+      text-align: left;
+      & > .item {
+        margin-bottom: 5px;
+      }
+    }
+    .rank_num {
+      display: none;
+    }
+    .label_1 {
+      background: url("../image/icon/rank_label_1.svg");
+    }
+    .label_2 {
+      background: url("../image/icon/rank_label_2.svg");
+    }
+    .label_3 {
+      background: url("../image/icon/rank_label_3.svg");
+    }
+    .rank_label {
+      display: block;
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      width: 120px;
+      height: 40px;
+      z-index: 99;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  }
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.817 16.816">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="icon_map_up" transform="translate(16.317 16.316) rotate(180)">
+    <g id="Group" transform="translate(0 0)">
+      <g id="Page_1_Copy_8" data-name="Page 1 Copy 8" transform="translate(15.817 0) rotate(90)">
+        <circle id="Oval_2" data-name="Oval 2" class="cls-1" cx="7.908" cy="7.908" r="7.908"/>
+        <path id="Path" class="cls-2" d="M.38,0A.365.365,0,0,0,.111.12.435.435,0,0,0,.111.7l4,4.331-4,4.331a.435.435,0,0,0,0,.581.36.36,0,0,0,.537,0L4.921,5.323a.435.435,0,0,0,0-.581L.648.12A.365.365,0,0,0,.38,0" transform="translate(6.471 2.876)"/>
+      </g>
+    </g>
+  </g>
+</svg>

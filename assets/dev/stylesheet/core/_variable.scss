@@ -1,0 +1,155 @@
+$global-mobile: true;
+/**********************************
+COLOR
+**********************************/
+// Application Color
+$global-color: (
+        primary: #4EAFF9,
+        primary-hover:#000,
+        secondary: #606f75,
+        secondary-hover:#000,
+        light-blue:#7CBBFC,
+        light-grey:#9B9B9B,
+        placeholder: #AFAFAF,
+        border-grey:#E5E5E5,
+        border-grey-dark:#D3D3D3,
+        background-default:#FAFAFA,
+        grey:#999,
+        border-light:#f9f9f9,
+        light-black:#4A4A4A,
+        nav-blue:#16D8F2,
+        red:#D0021B,
+        yellow: #F5B02C,
+        background-cover:rgba(0, 0, 0, .6),
+        line: #000,
+        facebook: #4B6EA9,
+        border-grey-select: #CFCFCF,
+        rank-yellow:#B79B1C,
+        rank-grey:#747474,
+        rank-brown:#A87122,
+);
+
+/**********************************
+SPACE SIZE
+**********************************/
+$global-space-base: 4px;
+$global-space: (
+        a: $global-space-base * 4,
+        b: 15px,
+        c: $global-space-base * 3,
+        e: $global-space-base * 5,
+        f: $global-space-base * 6,
+        g: $global-space-base * 7,
+        h: $global-space-base * 8,
+        i: $global-space-base * 9,
+        j: $global-space-base * 10,
+        k: $global-space-base * 11,
+        l: $global-space-base * 12,
+        m: $global-space-base * 13,
+        n: $global-space-base * 14,
+        o: $global-space-base * 15,
+        p: $global-space-base * 16,
+        q: $global-space-base * 17,
+        r: $global-space-base * 18,
+        s: $global-space-base * 19,
+        t: $global-space-base * 20
+);
+
+/**********************************
+RADIUS SIZE
+**********************************/
+$global-radius-size-base: 2px;
+$global-radius: (
+        a: $global-radius-size-base * 1,
+        b: $global-radius-size-base * 2,
+        c: $global-radius-size-base * 3,
+        d: $global-radius-size-base * 4
+);
+
+/**********************************
+WIDTH
+**********************************/
+// based on this article ,decide the breakpoint
+// http://getbootstrap.com/css/#grid-options
+$global-width: (
+        break-point-a: 1200px,
+        break-point-b: 782px,
+        break-point-c: 992px,
+        break-point-d: 768px,
+        break-point-e: 375px,
+        a:1200px,
+        b:980px,
+        c:650px,
+        d:260px,
+        e:238px, //width of form
+);
+
+/**********************************
+Z-INDEX
+**********************************/
+$global-z-index: (
+        a:0,
+        b:1000,
+        c:2000,
+        d:3000, //header
+        e:4000, //popup
+        modal:5000,
+);
+
+/********************************
+PATH
+*********************************/
+$global-path: (
+        font-icon:'"../font/sekailabIcons.woff"',
+        font-din:'"../font/din1451alt.ttf"',
+        img:'../image/',
+);
+
+/**********************************
+FONT-FAMILY
+************************************/
+$global-font: (
+        icon: '"sekai-icon"',
+        a: '"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif',
+        b: '"PingFang"'
+);
+
+/**********************************
+ANIMATION-SPEED
+************************************/
+$global-animation-speed-base: 0.2s;
+$global-animation-speed: (
+        a: $global-animation-speed-base * 1,
+        b: $global-animation-speed-base * 2,
+        c: $global-animation-speed-base * 3
+);
+
+/**********************************
+SHADOW
+************************************/
+$global-shadow: (
+        card: 0 1px 1px map-get($global-color, g)
+);
+
+/**********************************
+FONT-SIZE
+************************************/
+$global-font-size: (
+        pc-h1:26px,
+        pc-h2:20px,
+        pc-h3:18px,
+        pc-normal:14px,
+        sp-h1:18px,
+        sp-h2:16px,
+        sp-h3:14px,
+        sp-normal:12px
+);
+/**********************************
+ITEM SIZE
+************************************/
+$item-size: (
+        button-pc:40px,
+        button:36px,
+        input-pc:40px,
+        input:36px,
+);

@@ -1,0 +1,66 @@
+{
+  "name": "TS",
+  "description": "TS",
+  "version": "1.0.0",
+  "author": "monstarlab",
+  "license": "MIT",
+  "engines": {
+    "node": "^8.9.1"
+  },
+  "scripts": {
+    "start": "gulp default --env development",
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "browser-sync": "^2.14.0",
+    "event-stream": "^3.3.4",
+    "extname": "^0.1.5",
+    "fastclick": "^1.0.6",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat-util": "^0.5.5",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-data": "^1.3.1",
+    "gulp-extname": "^0.2.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.9",
+    "http-proxy-middleware": "^0.18.0",
+    "junk": "^2.1.0",
+    "minimist": "^1.2.0",
+    "pug": "^2.0.3",
+    "require-dir": "^0.3.0",
+    "rimraf": "^2.5.4",
+    "rollup": "^0.54.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-pug": "^0.1.6",
+    "rollup-plugin-uglify": "^4.0.0",
+    "run-sequence": "^1.2.2",
+    "template-init": "^0.3.0",
+    "template-render": "^0.4.1"
+  },
+  "verb": {
+    "related": {
+      "list": []
+    },
+    "plugins": [
+      "gulp-format-md"
+    ]
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

@@ -1,0 +1,34 @@
+.breadcrumb {
+  width: 100%;
+  max-width: map-get($global-width, a);
+  margin: 20px auto;
+  padding: 0 map-get($global-space, a);
+  .breadcrumb_list {
+    display: flex;
+    font-size: 12px;
+    line-height: 1;
+    & > .item {
+      & + .item {
+        &:before {
+          content: "/";
+          display: inline-block;
+          padding-right: 5px;
+        }
+      }
+    }
+    .item {
+      padding-right: 4px;
+      &:last-child {
+        @extend %elps;
+        color: #9B9B9B;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .breadcrumb {
+    display: none;
+  }
+}

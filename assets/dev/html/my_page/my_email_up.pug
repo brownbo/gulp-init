@@ -1,0 +1,66 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "メールアドレス再発行"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a my_page')
+  - base_path = '../'
+block content
+  .page_content.x_page_content
+    .x_scroll_content.scroll_content
+      -
+      +breadcrumb([
+        {
+          name: 'Top',
+          link: 'top/top.html'
+        },
+        {
+          name: 'マイページ',
+          link: 'my_page/my_center.html'
+        },
+        {
+          name: page_name,
+          link: ''
+        }
+      ])
+      -
+      .login_cont_wrap
+        h2.title_h
+          = page_name
+        div.login_suc_text
+          p 新しいメールアドレスを入力してください。
+        form(id="changePwForm" action="/")
+          .input_wrap.form_wrap
+            p.title 現在のメールアドレス
+            .input_row
+              input(type="text" disabled placeholder="例) example@hodaiweb.com" autocomplete="off")
+            p.error_text 必須項目です。必ずご入力ください。
+          .input_wrap.form_wrap
+            p.title
+              span.title_label 必須
+              | 新メールアドレス
+            .input_row
+              input(type="text" name="password" placeholder="例) example@hodaiweb.com" autocomplete="off" check="required email")
+            p.error_text 必須項目です。必ずご入力ください。
+          .input_wrap.form_wrap
+            p.title
+              span.title_label 必須
+              | パスワード
+            .input_row
+              input(type="password" name="password" placeholder="8~20文字で入力してください" autocomplete="off" check="required" maxlength="20")
+            p.error_text 必須項目です。必ずご入力ください。
+          .login_submit_button
+            input(type="submit" value="登録する")

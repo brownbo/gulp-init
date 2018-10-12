@@ -1,0 +1,32 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "マイページ"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a error_page')
+  - base_path = '../'
+block content
+  .page_content.error_wrap
+      .error_wrap_cont.x_404
+        h3 このページはご利用頂けません
+        p アクセスしようとしたページはすでに存在しないか
+        p またはURLが間違っている可能性があります。
+        a(href="/") トップページに戻る
+      .error_wrap_cont.x_500
+        h3 サーバーエラー
+        p ウェブサイトがメンテナンス中のために停止しているか、
+        p 正しく設定されていない可能性があります。
+        a(href="/") トップページに戻る

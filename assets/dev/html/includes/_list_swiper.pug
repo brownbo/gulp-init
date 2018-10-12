@@ -1,0 +1,58 @@
+-
+  data.key_visual = [
+    {
+      "link":"#",
+      "isVideo": true,
+      "visual":"giJSY7xKJ4o",
+      "title": "",
+      "sub_title": "サブ_1",
+      "addtion_class": "x_hoge"
+    },
+    {
+      "link":"#",
+      "visual":"news-1.jpg",
+      "title": "All you can do in Japan. Do it all with travel passes!",
+      "sub_title": "サブ_1",
+      "addtion_class": "x_hoge"
+    },
+    {
+      "link":"#",
+      "visual":"route-1.jpg",
+      "title": "All you can do in Japan. Do it all with travel passes!",
+      "sub_title": "サブ_1",
+      "addtion_class": "x_hoge"
+    },
+    {
+      "link":"#",
+      "visual":"pass-1.jpg",
+      "title": "All you can do in Japan. Do it all with travel passes!",
+      "sub_title": "サブ_1",
+      "addtion_class": "x_hoge"
+    },
+    {
+      "link":"#",
+      "visual":"how-to-1.jpg",
+      "title": "All you can do in Japan. Do it all with travel passes!",
+      "sub_title": "サブ_1",
+      "addtion_class": "x_hoge"
+    },
+  ]
+-
+
+<section class="key_visual swiper-container" id="listSwiper">
+  <ul class="swiper-wrapper key_visual_list">
+  - for (var i = 0; i < data.key_visual.length; i++) {
+  - var item = data.key_visual[i]
+    <li class="swiper-slide">
+      <a href="javascript:void(0);" data-background=#{path_dammy + 'key_visual/' + item.visual} class="#{item.addtion_class} swiper-lazy x_player_button">
+        - if(item.isVideo) {
+        <div id="ytplayer0" data-id="mpGezJIc5nc"></div>
+        - } else {
+        <p class="text">#{item.title}</p>
+        -}
+      </a>
+    </li>
+  -}
+  </ul>
+  <div class="swiper-pagination"></div>
+</section>

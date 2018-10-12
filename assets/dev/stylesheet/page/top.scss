@@ -1,0 +1,445 @@
+.page_top {
+  .wrapper {
+    @extend %wrapper;
+  }
+  .map {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px !important;
+  }
+
+  .map_title {
+    margin-left: 56px;
+    padding-top: 32px;
+    width: 30%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .map_wrap {
+    position: relative;
+    flex-grow: 1;
+    height: 24.1vw;
+    max-height: 270px;
+    margin-right: 24px;
+    border-radius: 8px;
+    border: 1px solid map-get($global-color, border-grey);
+    overflow: hidden;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    &.is_open {
+      height: 100%;
+      max-height: 530px;
+    }
+  }
+
+  .map_item {
+    position: relative;
+    width: 100%;
+    height: 42vw;
+    max-height: 530px;
+  }
+
+  img.close_img {
+    transform: rotate(180deg);
+    transition: all .3s ease-in-out;
+    &.is_open {
+      transform: rotate(0);
+    }
+  }
+
+  .map_collapse {
+    position: absolute;
+    left: 7%;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 36px;
+    background: url("../image/top/btn_bg.svg") center no-repeat;
+    background-size: cover;
+    color: #fff;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+      width: 22px;
+      margin-left: 20px;
+      margin-right: 8px;
+    }
+    span {
+      flex-grow: 1;
+    }
+  }
+  .cell {
+    position: absolute;
+    width: 20%;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+    .label {
+      position: absolute;
+      background-color: #fff;
+      min-width: 90px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      padding: 6px 0;
+      box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.25);
+      z-index: 2;
+      text-align: center;
+      transition: all .2s ease-in-out;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, .04);
+      }
+    }
+    &:hover, &:active {
+      .label {
+        color: #fff !important;
+        border-color: #fff !important;
+      }
+      &.hokkaido {
+        .label {
+          background-color: #91e4ef;
+        }
+      }
+      &.okinawa {
+        .label {
+          background-color: #ff79a6;
+        }
+      }
+      &.kyushu {
+        .label {
+          background-color: #62b982;
+        }
+      }
+      &.hokuriku {
+        .label {
+          background-color: #9f9bff;
+        }
+      }
+      &.tohoku {
+        .label {
+          background-color: #ff5a50;
+        }
+      }
+      &.kanto {
+        .label {
+          background-color: #47cd84;
+        }
+      }
+      &.tokai {
+        .label {
+          background-color: #2c97ce;
+        }
+      }
+      &.kansai {
+        .label {
+          background-color: #efa1b5;
+        }
+      }
+      &.sanyo {
+        .label {
+          background-color: #2e8b57;
+        }
+      }
+      &.sanin {
+        .label {
+          background-color: #f39800;
+        }
+      }
+      &.shikoku {
+        .label {
+          background-color: #cf9bff;
+        }
+      }
+    }
+    &.hokkaido {
+      right: 4%;
+      top: 7%;
+      width: 22%;
+      .label {
+        top: 25%;
+        left: -10%;
+        border-color: #91e4ef;
+        color: #23a3b3;
+      }
+    }
+    &.okinawa {
+      left: 4%;
+      bottom: 8%;
+      width: 10%;
+      .label {
+        top: 60%;
+        left: 30%;
+        border-color: #ff79a6;
+        color: #ff79a6;
+      }
+    }
+    &.kyushu { //九州
+      left: 6%;
+      bottom: 8%;
+      .label {
+        top: -5%;
+        left: 5%;
+        border-color: #62b982;
+        color: #62b982;
+      }
+    }
+    &.hokuriku {
+      right: 26.2%;
+      top: 46%;
+      width: 24%;
+      .label {
+        top: 0;
+        left: 50%;
+        border-color: #9f9bff;
+        color: #9f9bff;
+      }
+    }
+    &.tohoku {
+      right: 11%;
+      top: 28%;
+      .label {
+        top: 25%;
+        left: 55%;
+        border-color: #ff5a50;
+        color: #ff5a50;
+      }
+    }
+    &.kanto {
+      right: 13.2%;
+      top: 56%;
+      width: 16.4%;
+      .label {
+        top: 0;
+        left: 55%;
+        border-color: #47cd84;
+        color: #47cd84;
+      }
+    }
+    &.tokai {
+      right: 26.4%;
+      top: 61.8%;
+      width: 20.3%;
+      .label {
+        top: 45%;
+        left: 35%;
+        border-color: #2c97ce;
+        color: #2c97ce;
+      }
+    }
+    &.kansai {
+      left: 39.6%;
+      top: 50.7%;
+      .label {
+        top: 30%;
+        left: 40%;
+        border-color: #efa1b5;
+        color: #efa1b5;
+      }
+    }
+    &.sanyo {
+      right: 56%;
+      bottom: 35%;
+      width: 18%;
+      .label {
+        top: -30%;
+        left: 45%;
+        border-color: #2e8b57;
+        color: #2e8b57;
+      }
+    }
+    &.sanin {
+      right: 55%;
+      bottom: 19%;
+      .label {
+        top: 32%;
+        left: 22%;
+        border-color: #f39800;
+        color: #f39800;
+      }
+    }
+    &.shikoku { //四国
+      right: 61%;
+      bottom: 8%;
+      width: 15%;
+      .label {
+        top: 55%;
+        left: 45%;
+        border-color: #cf9bff;
+        color: #cf9bff;
+      }
+    }
+  }
+
+  .image_pin {
+    display: inline-table;
+    width: 25%;
+    max-width: 270px;
+    transition: all .2s ease-in-out;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      opacity: .6;
+    }
+  }
+  .content {
+    position: relative;
+  }
+  .list {
+    width: calc(100% - 380px);
+  }
+  .header_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 16px 48px;
+    background-color: #fff;
+  }
+  .cell_title {
+    position: relative;
+    padding-left: 24px;
+    font-weight: bold;
+    font-size: map-get($global-font-size, pc-h1);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: map-get($global-color, primary);
+      width: 4px;
+      height: 40px;
+    }
+  }
+  .more {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    text-align: center;
+    color: map-get($global-color, primary);
+    font-size: 16px;
+    line-height: 1;
+    img {
+      width: 24px;
+      margin-left: 8px;
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .page_top {
+    .map {
+      margin-bottom: 24px !important;
+      &.wrapper {
+        padding: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .04);
+      }
+    }
+    .map_wrap {
+      margin-right: 0;
+      padding-top: 16px;
+      padding-bottom: 32px;
+      max-height: none;
+      height: 30vw;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      &.is_open {
+        height: calc(60vw + 40px);
+        max-height: none;
+      }
+    }
+    .slide_bar {
+      width: 100%;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      margin-top: 16px;
+      height: auto;
+    }
+    .map_collapse {
+      width: 110px;
+      height: 28px;
+      img {
+        width: 16px;
+      }
+    }
+    .map_item {
+      height: 60vw;
+    }
+    .cell {
+      .label {
+        font-size: 12px;
+        min-width: 60px;
+        padding: 4px 0;
+      }
+    }
+    .image_pin {
+      display: none;
+    }
+    .news_list {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .list {
+      width: 100%;
+      .list_cell {
+        margin: 0 0 32px 0;
+        padding: 0 0 8px 0;
+        border-radius: 6px;
+        background-color: #fff;
+      }
+      .wrapper {
+        padding: 0;
+      }
+      .swiper-container {
+        padding: 0 8px;
+      }
+      .swiper-slide {
+        width: 80% !important;
+        + .swiper-slide {
+          margin-left: 24px;
+        }
+      }
+    }
+
+    .header_title {
+      width: calc(100% - 16px);
+      margin: 0 8px 16px 8px;
+      padding: 0;
+      border-bottom: 1px solid map-get($global-color, border-grey);
+    }
+    .cell_title {
+      padding-left: 16px;
+      font-size: map-get($global-font-size, sp-h1);
+      &::after {
+        left: 5px;
+        top: 3px;
+        width: 2px;
+        height: 26px;
+      }
+    }
+
+    .more {
+      font-size: 12px;
+      img {
+        width: 16px;
+        margin-left: 4px;
+      }
+    }
+  }
+}

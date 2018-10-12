@@ -1,0 +1,59 @@
+.error_page {
+  height: inherit;
+  .bottom {
+    display: none;
+  }
+  .error_wrap {
+    position: relative;
+    min-height: calc(100% - 458px);
+  }
+  .error_wrap_cont {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -65px;
+    text-align: center;
+    h3 {
+      font-size: 26px;
+      line-height: 38px;
+      margin-bottom: 14px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      color: #4A4A4A;
+    }
+    a {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 14px;
+      text-decoration: underline;
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .error_page {
+    .header {
+      .middle {
+        .wrapper {
+          background: linear-gradient(to bottom, #4EAFF9, #16D8F2);
+        }
+      }
+    }
+    .error_wrap {
+      padding-top: 50px;
+      height: inherit;
+    }
+    .error_wrap_cont {
+      h3 {
+        font-size: 16px;
+      }
+      p, a {
+        font-size: 12px;
+      }
+    }
+  }
+}

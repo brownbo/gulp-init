@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13px" height="26px" viewBox="0 0 13 26" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>up</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC_-お得パス详情" transform="translate(-151.000000, -2213.000000)">
+            <g id="このパスを使ったモデルルート" transform="translate(148.000000, 2063.000000)">
+                <g id="up" transform="translate(9.500000, 163.000000) rotate(180.000000) translate(-9.500000, -163.000000) translate(3.000000, 150.000000)">
+                    <path d="M1.77635684e-15,0 C7.17970175,0 13,5.82029825 13,13 C13,20.1797017 7.17970175,26 1.77635684e-15,26 L1.77635684e-15,1.77635684e-15 Z" id="Combined-Shape" fill="#4A4A4A"></path>
+                    <path d="M2.65728875,19.5 C2.53167738,19.5 2.40614267,19.4525765 2.31032927,19.3575776 C2.11877913,19.1676367 2.11877913,18.8596312 2.31032927,18.6697093 L7.48231727,13.5417047 L2.31032927,8.41370004 C2.11877913,8.22370217 2.11877913,7.91575361 2.31032927,7.72583174 C2.50195607,7.53583386 2.81252561,7.53583386 3.00415241,7.72583174 L8.52300406,13.1977705 C8.7145542,13.3876924 8.7145542,13.6956409 8.52300406,13.8856388 L3.00415241,19.3575776 C2.90833901,19.4525765 2.7828043,19.5 2.65728875,19.5" id="Fill-1" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

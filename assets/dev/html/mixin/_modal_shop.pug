@@ -1,0 +1,65 @@
+mixin modalShop(dataObj)
+  -
+    data.shop_text = [
+      {
+        "icon":"pin.svg",
+        "text":"住所",
+      },
+      {
+        "icon":"clock.svg",
+        "text":"テキスト",
+      },
+      {
+        "icon":"holiday.svg",
+        "text":"休み",
+      },
+      {
+        "icon":"phone.svg",
+        "text":"電話",
+      },
+      {
+        "icon":"earth.svg",
+        "text":"http://google.com",
+      }
+    ]
+  -
+  .modal.is_hidden.x_modal.x_shop_modal
+    .modal_dialog
+      .modal_background
+      .modal_content.mode_shop_content
+        img.icon_close.x_close(src= '../../image/icon/close.svg')
+        .shop.x_shop
+          .visual
+            img.shop_image(src=path_dammy + "shop/01.png" alt="" width="100%" height="auto")
+          .shop_detail
+            p.shop_title
+              span
+                = '店名店名店名（Okeisushi）'
+              span.like.x_shop_like
+                img(src='../image/icon/location.svg' alt='location')
+                span
+                  | お気に入りのスポットに追加する
+              span.icon_collapse.x_icon_collapse
+            div.shop_detail_list.animate.is_close
+              - for (var i = 0; i < data.shop_text.length; i++) {
+              - var item = data.shop_text[i]
+              .text
+                .icon
+                  img(src=path_icon+item.icon alt="")
+                - if(i===data.shop_text.length-1) {
+                p
+                  a(href=item.text target="_blank")
+                - } else {
+                p= item.text
+                - }
+              - }
+          .line
+          .like.x_shop_like
+            img(src='../image/icon/location.svg' alt='location')
+            span.x_data_name
+              | お気に入りのスポットに追加する
+
+          .link_image.link_pin.x_pin
+            img(src=path_dammy + "ad/pinnar.svg" alt="pinnAR")
+          .coupon.is_unavailable
+            img(src=path_dammy +"coupon/01.png" alt="" class="shop_image" width="100%" height="auto")

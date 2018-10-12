@@ -1,0 +1,3 @@
+p.action_item.like_btn.x_like_btn(data-type=item.likeType data-id=item.newsId)
+  span(class=item.like ? 'liked' : '')
+    = (item.likeCount && item.likeCount.toString().replace(/(\d)(?=(?:\d{3})+$)/g, '$1,'))

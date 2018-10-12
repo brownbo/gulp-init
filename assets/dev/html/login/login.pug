@@ -1,0 +1,45 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "登録"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a page_news_list page_login')
+  - base_path = '../'
+  - headerType = '2'
+block content
+  .page_content.x_page_content
+    .x_scroll_content.scroll_content
+      .login_cont_wrap
+        h2.title_h ログイン
+        form(id="loginForm")
+          .input_wrap.form_wrap
+            p.title メールアドレス
+            .input_row
+              input(type="text" name="username" placeholder="例) example@hodaiweb.com" check="required email" autocomplete="off")
+            p.error_text 必須項目です。必ずご入力ください。
+          .input_wrap.form_wrap
+            p.title パスワード
+            .input_row
+              input(type="password" name="password" placeholder="半角英数字8文字以上" autocomplete="off" check="required" minlength="8" maxlength="20")
+            p.error_text 必須項目です。必ずご入力ください。
+          .login_checkbox_wrap
+            input(type="checkbox" name="remember-me" id="remember-me")
+            | 次回より自動ログイン
+          .login_submit_button
+            input(type="submit" value="ログイン")
+          .login_link_wrap
+            a(href="#") パスワードをお忘れの方はこちら
+            a(href="/login/register.html") 新規登録

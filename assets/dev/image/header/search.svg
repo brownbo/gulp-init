@@ -1,0 +1,48 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.994 43.887">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: 0.8;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: #9eb8c4;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" class="cls-1" d="M0,0H40.994V40.887H0Z" transform="translate(0.003 0.043)"/>
+    </clipPath>
+  </defs>
+  <g id="icon_search" transform="translate(-0.003 -0.043)">
+    <g id="グループ化_30" data-name="グループ化 30" class="cls-2" transform="translate(2 3)">
+      <g id="Group_3" data-name="Group 3">
+        <path id="Clip_2-3" data-name="Clip 2" class="cls-1" d="M0,0H40.994V40.887H0Z" transform="translate(0.003 0.043)"/>
+        <g id="Group_3-2" data-name="Group 3" class="cls-3">
+          <path id="Fill_1" data-name="Fill 1" class="cls-4" d="M39.3,40.887a1.689,1.689,0,0,1-1.234-.528l-9.282-7.918A18.075,18.075,0,0,1,4.07,29.369,17.992,17.992,0,0,1,18.038,0,17.977,17.977,0,0,1,31.319,30.166l9.21,7.857A1.7,1.7,0,0,1,39.3,40.887ZM18.084,3.576a14.519,14.519,0,1,0,5.5,1.079A14.457,14.457,0,0,0,18.084,3.576Z" transform="translate(0 0.043)"/>
+        </g>
+      </g>
+      <path id="Fill_4" data-name="Fill 4" class="cls-4" d="M.9.03a1,1,0,0,0-.895,1.1,1.009,1.009,0,0,0,1.116.885,7.945,7.945,0,0,1,5.951,1.69,6.719,6.719,0,0,1,1.98,5.27,1.005,1.005,0,0,0,2.011,0A8.59,8.59,0,0,0,8.4,2.218C5.415-.427,1.082.03.9.03Z" transform="translate(16.622 7.757)"/>
+    </g>
+    <g id="グループ化_31" data-name="グループ化 31">
+      <g id="Group_3-3" data-name="Group 3">
+        <path id="Clip_2-4" data-name="Clip 2" class="cls-1" d="M0,0H40.994V40.887H0Z" transform="translate(0.003 0.043)"/>
+        <g id="Group_3-4" data-name="Group 3" class="cls-3">
+          <path id="Fill_1-2" data-name="Fill 1" class="cls-5" d="M39.3,40.887a1.689,1.689,0,0,1-1.234-.528l-9.282-7.918A18.075,18.075,0,0,1,4.07,29.369,17.992,17.992,0,0,1,18.038,0,17.977,17.977,0,0,1,31.319,30.166l9.21,7.857A1.7,1.7,0,0,1,39.3,40.887ZM18.084,3.576a14.519,14.519,0,1,0,5.5,1.079A14.457,14.457,0,0,0,18.084,3.576Z" transform="translate(0 0.043)"/>
+        </g>
+      </g>
+      <path id="Fill_4-2" data-name="Fill 4" class="cls-5" d="M.9.03a1,1,0,0,0-.895,1.1,1.009,1.009,0,0,0,1.116.885,7.945,7.945,0,0,1,5.951,1.69,6.719,6.719,0,0,1,1.98,5.27,1.005,1.005,0,0,0,2.011,0A8.59,8.59,0,0,0,8.4,2.218C5.415-.427,1.082.03.9.03Z" transform="translate(16.622 7.757)"/>
+    </g>
+  </g>
+</svg>

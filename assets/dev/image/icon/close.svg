@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.071 53.156">
+    <defs>
+        <style>
+            .cls-1{fill:#444648;stroke-miterlimit:10}.cls-1,.cls-2{stroke:#fff;stroke-width:2px}.cls-2,.cls-4{fill:none}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="close" transform="translate(-1067 -474.172)">
+        <g id="bg" class="cls-1" transform="translate(1067 474.172)">
+            <rect width="52.071" height="53.156" class="cls-3" rx="26.036"/>
+            <rect width="50.071" height="51.156" x="1" y="1" class="cls-4" rx="25.036"/>
+        </g>
+        <g id="close-2" data-name="close" transform="translate(1084.839 492.736)">
+            <path id="線_3" d="M0 0v22.982" class="cls-2" data-name="線 3" transform="rotate(45 8.126 19.617)"/>
+            <path id="線_4" d="M0 0v22.982" class="cls-2" data-name="線 4" transform="rotate(-45)"/>
+        </g>
+    </g>
+</svg>

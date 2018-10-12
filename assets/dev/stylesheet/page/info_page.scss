@@ -1,0 +1,17 @@
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .login_select_wrap {
+    padding: 0;
+    .description {
+      border-bottom: 1px solid #c6c6c6;
+      padding-top: 17px;
+      span {
+        display: block;
+      }
+    }
+    .text_container {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.loading {
+  display: none;
+  text-align: center;
+  padding: 40px 0;
+  &.is_shown {
+    display: block;
+  }
+}
+@include break_point(map-get($global-width, break-point-b)) {
+}

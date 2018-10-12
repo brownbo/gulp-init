@@ -1,0 +1,44 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "メールを送信しました"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a page_news_list page_login')
+  - base_path = '../'
+  - headerType = '2'
+block content
+  .page_content.x_page_content
+    .x_scroll_content.scroll_content
+      .login_cont_wrap
+        h2.title_h
+          = page_name
+        .login_suc_text
+          p
+            span メールアドレスに
+            span パスワード再設定のURLをお送りました。
+          p.suc_text_top
+            span 記載されているURLより、
+            span パスワードの再設定をお願いします。
+        .forget_email_wrap
+          p [メールが届かない場合]
+          p ・迷惑メール設定をされている場合は、「***@nipponhodai.com」からのメール受信を許可してください。
+          p ・迷惑メールボックスに振り分けられている可能性があります。迷惑メールボックスをご確認ください。
+          p
+            | ※ 上記を行ってもメールが届かない場合は、お手数ですが、
+            a(href="#") お問い合わせ
+            | よりご連絡ください。
+        .login_link_wrap
+          a(href="#") 日本放題TOPへ

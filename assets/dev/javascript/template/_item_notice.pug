@@ -1,0 +1,11 @@
+-for(var i=0; i<data.pageData.length; i++) {
+-var item = data.pageData[i]
+  li
+    h3
+      -if(item.isNews){
+      em NEW
+      -}
+      time= item.noticeShowDt
+      span= item.noticeTitle
+    p= item.noticeContent
+-}

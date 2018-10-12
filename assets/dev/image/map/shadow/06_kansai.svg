@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="142px" height="171px" viewBox="0 0 142 171" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-10.0%" y="-8.1%" width="120.0%" height="116.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(4.000000, 3.000000)" fill-rule="nonzero">
+            <g id="06_kansai" opacity="0.7" transform="translate(9.000000, 10.000000)" fill="#000000">
+                <path d="M21.072,0 L0,105.3 L40.977,105.3 C43.4024157,105.299977 45.6968819,106.400286 47.2153201,108.291578 C48.7337583,110.18287 49.312193,112.660907 48.788,115.029 L43.536,138.757 C43.011807,141.125093 43.5902417,143.60313 45.1086799,145.494422 C46.6271181,147.385714 48.9215843,148.486023 51.347,148.486 L97.961,148.486 L120.033,26.8 L89.424,26.743 L95.961,0.121 L21.072,0 Z" id="Path_9" filter="url(#filter-1)"></path>
+            </g>
+            <g id="06_kansai" fill="#EFA1B5" stroke="#FFFFFF" stroke-width="5">
+                <path d="M21.072,0 L0,105.3 L40.977,105.3 C43.4024157,105.299977 45.6968819,106.400286 47.2153201,108.291578 C48.7337583,110.18287 49.312193,112.660907 48.788,115.029 L43.536,138.757 C43.011807,141.125093 43.5902417,143.60313 45.1086799,145.494422 C46.6271181,147.385714 48.9215843,148.486023 51.347,148.486 L97.961,148.486 L120.033,26.8 L89.424,26.743 L95.961,0.121 L21.072,0 Z" id="Path_9"></path>
+            </g>
+        </g>
+    </g>
+</svg>

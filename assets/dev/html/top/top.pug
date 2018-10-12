@@ -1,0 +1,72 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "Top"
+  title
+    =page_name
+  meta(
+    name='keywords'
+    content='keywords'
+  )
+  meta(
+    name='description'
+    content='description'
+  )
+  meta(
+    name='language'
+    content='en'
+  )
+
+block page_option
+  - page_class.push('page_a page_news_list page_top')
+  - base_path = '../'
+
+block content
+  -
+    data.top_list =[
+      {
+        title:'特集',
+        key:'collection',
+        linkTo:'/news/toList'
+      },
+      {
+        title:'トラベルプラン',
+        key:'route',
+        linkTo:'/route/toList'
+      },
+      {
+        title:'お得なバス',
+        key:'pass',
+        linkTo:'/pass/toList'
+      },
+      {
+        title:'HOW TO',
+        key:'howTo',
+        linkTo:'/howTo/toList'
+      }
+    ]
+  -
+  .page_content.x_page_content
+    .x_scroll_content
+      include ../includes/_list_swiper
+        section.content.wrapper
+          //.map.wrapper
+            //include ./_map.pug
+
+            //.image_pin.x_pin
+            //  img(src='../image/top/PinnAR.svg' alt='PinnAR')
+          .list
+            - for(var i = 0; i < data.top_list.length; i++){
+            - var item = data.top_list[i]
+            - var parent ='x_'+ item.key +'_container'
+            .list_cell
+              .wrapper
+                .header_title
+                  .cell_title
+                    = item.title
+                  a.more(href=item.linkTo)
+                    = '全てを見る'
+                    img(src=path_icon + 'icon_arrow.svg' alt="more")
+                .swiper-container(id='x_top_cell' + i)
+                  ul.news_list.swiper-wrapper(class=parent)
+            - }
+          include ../includes/_top_side_bar

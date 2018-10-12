@@ -1,0 +1,244 @@
+.page_pass_detail {
+  .main_content {
+    @extend %title-center;
+  }
+  .content_pay {
+    margin-top: 0 !important;
+    .label_title + .text {
+      padding: 16px;
+      border-radius: 4px;
+      background-color: rgba(78, 175, 249, .1);
+      color: map-get($global-color, primary);
+    }
+  }
+  .content_shop {
+    .visual.limit {
+      width: 90%;
+      max-width: 650px;
+    }
+  }
+}
+
+.contact {
+  .inner_wrapper {
+    padding: 24px;
+    border: 1px solid map-get($global-color, border-grey);
+    border-bottom: 3px solid map-get($global-color, border-grey);
+    font-size: 14px;
+    h3.title {
+      border-bottom: none;
+      font-size: 20px;
+    }
+  }
+}
+
+.option_form {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    &:nth-child(odd) {
+      .form_title {
+        background-color: map-get($global-color, light-blue);
+      }
+    }
+    &:nth-child(even) {
+      .form_title {
+        background-color: map-get($global-color, primary);
+      }
+    }
+    + .item {
+      margin-top: -1px;
+    }
+  }
+  .form_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    min-height: 60px;
+    width: 30%;
+    color: #fff;
+  }
+  .form_content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    min-height: 60px;
+    padding: 8px;
+    border: 1px solid map-get($global-color, border-grey);
+    font-size: 14px;
+    color: map-get($global-color, light-black);
+    line-height: 1;
+    word-break: break-all;
+  }
+
+  .icon_item {
+    position: relative;
+    width: 33.3%;
+    margin-top: 8px;
+    img {
+      width: auto;
+      vertical-align: middle;
+    }
+    + .icon_item {
+      &::after {
+        position: absolute;
+        display: inline-block;
+        background-color: map-get($global-color, border-grey);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        content: "";
+        width: 1px;
+      }
+    }
+    &.active {
+      color: map-get($global-color, primary);
+    }
+  }
+  .icon_text {
+    line-height: 1.6;
+  }
+}
+
+.pass_shop {
+  margin-top: 48px;
+}
+
+.more-link {
+  text-align: right;
+  line-height: 48px;
+  a {
+    color: map-get($global-color, primary);
+    font-size: 16px;
+    cursor: pointer;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 13px;
+      height: 19px;
+      background: url("../image/icon/back.svg") center -2px no-repeat;
+      background-size: 100% 100%;
+      vertical-align: middle;
+      margin-left: 13px;
+    }
+  }
+}
+
+.pass_item_a {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  .visual_video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    img {
+      width: 20%;
+    }
+  }
+  .visual {
+    width: 100%;
+    padding-top: 58%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 783px) {
+  .option_form {
+    .item {
+      + .item {
+        flex-direction: column;
+        margin-right: -1px;
+        width: 20%;
+        .form_title {
+          width: 100%;
+          min-width: 100%;
+        }
+        .form_content {
+          width: 100%;
+        }
+      }
+      &:nth-child(1) {
+        width: 100%;
+        margin-right: 4px;
+        margin-bottom: 0;
+        .form_title {
+          width: 20%;
+          min-width: 20%;
+          flex-shrink: 0;
+        }
+      }
+    }
+    .form_title {
+      font-size: 13px;
+    }
+    .icon_item {
+      flex-grow: 1;
+      width: auto;
+      border-bottom: none;
+      text-align: center;
+    }
+  }
+  .more-link {
+    text-align: right;
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .option_form {
+    .form_content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .icon_item {
+      img {
+        width: 30px;
+      }
+      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        margin-top: 0;
+      }
+      &:nth-child(4) {
+        &::after {
+          content: none;
+        }
+      }
+      &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+        border-top: 1px solid map-get($global-color, border-grey);
+        padding: 8px 0 0 0;
+        &::after {
+          top: 5px;
+        }
+      }
+      + .icon_item {
+        line-height: 30px;
+      }
+      .icon_text {
+        display: none;
+      }
+    }
+  }
+  .more-link {
+    text-align: center;
+  }
+  .content_related_article {
+    .title {
+      margin-bottom: 0 !important;
+    }
+  }
+}

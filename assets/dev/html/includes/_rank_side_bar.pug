@@ -1,0 +1,8 @@
+section.content.side_content
+  h3 ランキング
+  ul.list_container
+    - for(var i = 0; i < 4; i ++ ) {
+    +item_b(i + 1)
+    - }
+  .side_footer
+    a(href="#") もっと見る

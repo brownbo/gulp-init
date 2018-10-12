@@ -1,0 +1,70 @@
+block content
+  -
+    data.shop_text = [
+      {
+        "icon":"pin.svg",
+        "text":"住所",
+      },
+      {
+        "icon":"clock.svg",
+        "text":"テキスト",
+      },
+      {
+        "icon":"holiday.svg",
+        "text":"休み",
+      },
+      {
+        "icon":"phone.svg",
+        "text":"電話",
+      },
+      {
+        "icon":"earth.svg",
+        "text":"http://google.com",
+      }
+    ]
+
+.shop(data-id='4')
+  .visual
+    <img src="#{path_dammy + "shop/01.png"}" alt="" class="shop_image" width="100%" height="auto">
+  <div class="shop_detail">
+    p.shop_title
+      span
+        = '店名店名店名（Okeisushi）'
+      span.like.x_shop_like
+        img(src='../image/icon/location.svg' alt='location')
+        span
+          |お気に入りのスポットに追加する
+      span.icon_collapse.x_icon_collapse
+    div.shop_detail_list.animate.is_close
+      - for (var i = 0; i < data.shop_text.length; i++) {
+      - var item = data.shop_text[i]
+      <div class="text">
+        <span class="icon">
+          <img src="#{path_icon + item.icon}" alt="">
+        </span>
+        - if(i===data.shop_text.length-1) {
+          <p>
+            <a href=#{item.text} target="_blank">#{item.text}</a>
+          </p>
+        - } else {
+          <p>#{item.text}</p>
+        - }
+      </div>
+      - }
+  </div>
+  <div class="line"></div>
+
+  .like.x_shop_like
+    img(src='../image/icon/location.svg' alt='location')
+    span
+      | お気に入りのスポットに追加する
+
+  .link_image.link_pin.x_pin
+    img(src=(path_dammy + "ad/pinnar.svg") alt="pinnAR")
+
+  <div class="coupon is_unavailable">
+    <img src="#{path_dammy + "coupon/01.png"}" alt="" class="shop_image" width="100%" height="auto">
+  </div>
+
+  p.discription
+    | また店舗では店内調理のひと手間をかけ、新鮮なネタを新鮮なままお客様に提供しています。

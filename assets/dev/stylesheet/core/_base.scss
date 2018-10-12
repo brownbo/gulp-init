@@ -1,0 +1,152 @@
+html,
+body {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // ios 光らない
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+  background-color: #FAFAFA;
+  width: 100%;
+  height: 100%;
+  color: #333;
+}
+
+[lang]:lang(en) {
+  .search_bar .search_input .search_button {
+    font-size: 12px;
+  }
+}
+
+[lang]:lang(zh) {
+  font-family: "SF Pro TC", "SF Pro Text", "SF Pro Icons", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+[lang]:lang(ja) {
+  font-family: "SF Pro JP", "SF Pro Text", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+[lang]:lang(ko) {
+  font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
+
+select,
+button,
+input,
+textarea {
+  -webkit-appearance: none;
+  outline: 0;
+}
+
+input[type='checkbox']::-ms-check {
+  display: none;
+}
+
+input[disabled] {
+  opacity: 1;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+}
+
+textarea {
+  border: 1px solid map-get($global-color, border-grey);
+  border-radius: map-get($global-radius, b);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+textarea, input {
+  overflow: hidden;
+  ::-moz-placeholder {
+    color: map-get($global-color, placeholder);
+  }
+  ::-webkit-input-placeholder {
+    color: map-get($global-color, placeholder);
+  }
+  :-ms-input-placeholder {
+    color: map-get($global-color, placeholder);
+  }
+}
+
+.br-sp,
+.show_sp {
+  display: none;
+}
+
+.br-pc,
+.show_pc {
+  display: block;
+}
+
+.swiper-wrapper {
+  height: auto;
+}
+
+.swiper-slide {
+  height: 100%;
+  .image_item {
+    width: 100%;
+    padding-top: 58%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.hidden {
+  display: none !important;
+}
+
+button {
+  cursor: pointer;
+  @extend %button-hover;
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .br-sp,
+  .show_sp {
+    display: block;
+  }
+  .br-pc,
+  .show_pc {
+    display: none;
+  }
+  body {
+    font-size: 13px;
+  }
+}
+
+.is_default_portrait {
+  display: inline-block;
+  border: 1px solid #d3d3d3;
+  background: #fff url(../image/icon/file_default.svg) bottom no-repeat;
+  background-size: auto 80%;
+}

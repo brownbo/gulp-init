@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="46px" viewBox="0 0 30 46" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>back</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="750" height="75"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择" transform="translate(-43.000000, -17.000000)">
+            <g id="back" transform="translate(43.000000, 17.000000)"></g>
+            <g id="Rectangle-26">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#E5E5E5" stroke-width="1" x="0.5" y="0.5" width="749" height="74"></rect>
+            </g>
+            <path d="M48.0861626,38.6028706 C46.6201681,39.931481 46.6399501,42.1182385 48.134664,43.4261404 L64.9859991,58.171045 C65.4692144,58.5938788 66.2036558,58.544887 66.6264896,58.0616717 C67.0493234,57.5784565 67.0003316,56.8440151 66.5171163,56.4211813 L49.6658356,41.6762766 C49.2172798,41.2837971 49.2121572,40.7204183 49.6475795,40.3257589 L66.5322662,25.0240695 C67.0080155,24.5928979 67.0442008,23.8576935 66.6130291,23.3818897 C66.1818574,22.9061404 65.4466531,22.8699551 64.9708493,23.3011268 L48.0862171,38.6029251 L48.0861626,38.6028706 Z" id="Shape" fill="#4A4A4A" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="136px" height="73px" viewBox="0 0 136 73" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-10.8%" y="-24.4%" width="121.5%" height="148.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-5" transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
+            <g id="08_sanin" transform="translate(13.000000, 11.000000)" fill="#000000" fill-opacity="0.7">
+                <path d="M7.402,0 L111.62,0 L101.772,49.242 L8.002,49.242 C5.62895012,49.2419811 3.37837803,48.1884304 1.85842879,46.3660364 C0.338479543,44.5436424 -0.293962453,42.1405067 0.132,39.806 L7.402,0 Z" id="Path_7" filter="url(#filter-1)"></path>
+            </g>
+            <g id="08_sanin" fill="#F39800" stroke="#FFFFFF" stroke-width="5">
+                <path d="M7.402,0 L111.62,0 L101.772,49.242 L8.002,49.242 C5.62895012,49.2419811 3.37837803,48.1884304 1.85842879,46.3660364 C0.338479543,44.5436424 -0.293962453,42.1405067 0.132,39.806 L7.402,0 Z" id="Path_7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

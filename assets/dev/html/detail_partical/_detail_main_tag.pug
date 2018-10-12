@@ -1,0 +1,25 @@
+block content
+  -
+    data.tag = [
+      {
+        "name":"ショッピング",
+        "link":"#"
+      },
+      {
+        "name":"東北",
+        "link":"#"
+      },
+      {
+        "name":"タグ_1",
+        "link":"#"
+      }
+    ]
+
+section.content.content_tag
+  .wrapper
+    ul.tag_list
+      - for (var i = 0; i < data.tag.length; i++) {
+      - var item = data.tag[i]
+      li.item
+        <a href="#{item.link}">#{item.name}</a>
+      - }

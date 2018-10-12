@@ -1,0 +1,14 @@
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  margin-left: -60px;
+  padding:8px 16px;
+  background-color: rgba(0, 0, 0, .7);
+  color: #fff;
+  border-radius: 4px;
+  z-index: map-get($global-z-index, f);
+  text-align: center;
+  line-height: 1;
+}

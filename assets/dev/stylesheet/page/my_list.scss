@@ -1,0 +1,121 @@
+.my_page {
+  .my_list_num {
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+    color: #121212;
+  }
+  .my_list_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 46px 0 40px 0;
+    padding-left: 24px;
+    border-left: 4px solid #4eaff9;
+    & > p {
+      font-size: 26px;
+      line-height: 37px;
+      @extend %elps
+    }
+    .my_btn_wrap {
+      span {
+        @extend %button;
+        @extend %button-hover;
+      }
+      span:first-child {
+        margin-right: 20px;
+      }
+      .edit_btn {
+        background-color: #4eaff9;
+        color: #fff;
+        min-width: 60px;
+      }
+      .delete_btn {
+        background-color: #ff5a50;
+        color: #fff;
+      }
+      .cancel_btn {
+        background-color: #fff;
+        color: #4EAFF9;
+        border: 1px solid #4EAFF9;
+      }
+      .edit_wrap, .delete_wrap {
+        display: flex;
+        height: 40px;
+      }
+      .delete_wrap {
+        display: none;
+      }
+    }
+  }
+  .edit_wrapper {
+    .my_item_li .checkbox_wrap, .my_btn_wrap .delete_wrap {
+      display: flex;
+    }
+    .my_btn_wrap .edit_wrap {
+      display: none;
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .my_page {
+    .page_content {
+      .my_list_wrap {
+        padding: 0 20px;
+      }
+    }
+    .my_list_num {
+      font-size: 12px;
+    }
+    .my_list_title {
+      margin: 30px 0;
+      padding-left: 15px;
+      height: 26px;
+      line-height: 26px;
+      & > p {
+        font-size: 18px;
+      }
+    }
+    .my_list_title {
+      .my_btn_wrap {
+        span {
+          padding: 0 15px;
+          height: 30px;
+        }
+        span:first-child {
+          margin-right: 6px;
+        }
+        .edit_wrap, .delete_wrap {
+          height: 30px;
+        }
+        .delete_wrap {
+          position: fixed;
+          height: 50px;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 3000;
+          background-color: #4a4a4a;
+          opacity: .98;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 0 20px;
+          .cancel_btn {
+            border: 1px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    .edit_wrapper {
+      .my_btn_wrap .delete_wrap {
+        display: flex;
+      }
+    }
+  }
+}

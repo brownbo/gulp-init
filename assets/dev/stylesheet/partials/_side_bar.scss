@@ -1,0 +1,122 @@
+.side_bar {
+  position: absolute;
+  right: 16px;
+  top: 0;
+  width: 380px;
+
+  .side_content {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: map-get($global-radius, c);
+
+    + .side_content {
+      margin-top: 32px;
+    }
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 26px;
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: map-get($global-color, border-grey);
+      flex-grow: 1;
+      margin-left: 10px;
+    }
+  }
+
+  .side_footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 40px;
+    a {
+      font-size: 16px;
+      color: #4a4a4a;
+      font-weight: 500;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+      border: 1px solid #4A4A4A;
+      border-radius: 50%;
+      background: url(../image/icon/back.svg) center no-repeat;
+      background-size: 50% 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &.is_fixed > .wrapper {
+    width: 380px;
+    position: fixed;
+    top: 0;
+  }
+
+  &.at_bottom {
+    bottom: 56px;
+    top: auto;
+  }
+
+  .item {
+    display: block;
+    margin-bottom: 16px;
+    .text {
+      @extend %elps;
+    }
+  }
+
+  .flag_new {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: 'NEW';
+      color: #fff;
+      background-color: #ff6c6c;
+      display: inline-block;
+      line-height: 16px;
+      font-size: 12px;
+      border-radius: map-get($global-radius, a);
+      padding: 0 5px;
+      margin-right: 5px;
+    }
+  }
+  .notice_time {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .side_bar {
+    position: relative;
+    width: 100%;
+    right: auto;
+    margin-bottom: 32px;
+    .wrapper {
+      padding: 0;
+    }
+    .list_container {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 8px);
+      margin: 0 -4px;
+    }
+    .item_b {
+      display: inline-block;
+      width: 50%;
+      padding: 0 4px;
+    }
+  }
+}
+

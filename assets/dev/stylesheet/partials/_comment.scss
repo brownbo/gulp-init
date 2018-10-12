@@ -1,0 +1,212 @@
+.comment_wrapper {
+  .reply_collapse {
+    div {
+      text-align: right;
+      color: map-get($global-color, primary);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .at_end {
+    padding-right: 16px;
+  }
+  + .comment_wrapper {
+    margin-top: 32px;
+  }
+
+  .comment_reply {
+    padding-left: 88px;
+    height: 0;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    &.expand {
+      padding-top: 20px;
+      height: auto;
+    }
+    .comment_input {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.comment_item {
+  padding: 16px;
+  background-color: map-get($global-color, background-default);
+  border-radius: map-get($global-radius, b);
+  + .comment_item {
+    margin-top: 40px;
+  }
+  .text {
+    padding-bottom: 8px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  .action_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .info_user {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    .avatar {
+      width: 34px;
+      height: 34px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      border-radius: 50%;
+      overflow: hidden;
+      &.is_default {
+        border: 1px solid map-get($global-color, border-grey-dark);
+        background-color: #fff;
+        background-position: center 6px;
+        background-size: contain;
+        background-image: url("../image/icon/file_default.svg");
+      }
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      line-height: 1.4;
+    }
+    .name {
+      color: #000;
+    }
+    .date {
+      padding-left: 8px;
+      color: map-get($global-color, light-grey);
+    }
+  }
+  .enable_delete {
+    color: map-get($global-color, light-grey);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .reply_collapse {
+    padding-left: 8px;
+  }
+}
+
+.reply {
+  margin-top: 0 !important;
+  margin-bottom: 20px;
+}
+
+.comment_input {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 40px;
+  .textarea_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 0;
+    transition: all .2s ease-in-out !important;
+    height: 40px;
+    border: 1px solid map-get($global-color, border-grey);
+    border-radius: map-get($global-radius, b);
+    overflow: hidden;
+    .count {
+      position: absolute;
+      right: 16px;
+      bottom: 18px;
+      color: map-get($global-color, border-grey);
+      span {
+        &:nth-child(2) {
+          padding: 0 2px;
+        }
+      }
+    }
+    &.is_focus {
+      height: 240px;
+      .count {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        height: 36px;
+        line-height: 36px;
+        padding-right: 16px;
+        text-align: right;
+      }
+    }
+  }
+  textarea {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 6px 16px;
+    line-height: 1.8;
+    font-size: 14px;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    z-index: map-get($global-z-index, b);
+  }
+  button {
+    flex-shrink: 0;
+    width: 130px;
+    height: 40px;
+    margin-left: 16px;
+  }
+}
+
+.comment_reply {
+  .textarea_wrapper {
+    &.is_focus {
+      height: 120px;
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .comment_input {
+    flex-direction: column;
+    .textarea_wrapper {
+      &.is_focus {
+        height: 120px;
+      }
+    }
+    textarea {
+
+    }
+    button {
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+
+  .comment_item {
+    .action_container {
+      align-items: flex-end;
+    }
+    .info_user {
+      .info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .date {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .comment_wrapper {
+    .comment_reply {
+      padding-left: 0;
+    }
+    .reply_collapse {
+      div {
+        text-align: center;
+      }
+    }
+  }
+
+}

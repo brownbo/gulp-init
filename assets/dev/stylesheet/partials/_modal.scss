@@ -1,0 +1,142 @@
+.modal {
+  position: relative;
+  width: 100%;
+  height: 0;
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  z-index: map-get($global-z-index, d);
+  &.is_hidden {
+    opacity: 0;
+    z-index: map-get($global-z-index,a)-10;
+  }
+
+  .modal_dialog {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal_background {
+    width: 100%;
+    height: 100%;
+    background-color: map-get($global-color, background-cover);
+  }
+
+  .modal_content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 560px;
+    margin-left: -280px;
+    margin-top: -210px;
+    background-color: map-get($global-color, background-default);
+    border-radius: map-get($global-radius, a);
+  }
+  .modal_header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 68px;
+    font-size: 24px;
+    text-align: center;
+    background-color: map-get($global-color, primary);
+    p {
+      color: #fff;
+    }
+  }
+  .icon_close {
+    box-sizing: content-box;
+    width: 32px;
+    padding: 8px;
+    position: absolute;
+    right: -16px;
+    top: -16px;
+  }
+  .modal_footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 24px;
+    button {
+      min-width: 100px;
+      + button {
+        margin-left: 16px;
+      }
+    }
+  }
+  .mode_shop_content {
+    background-color: #fff;
+    transform: translateY(-50%);
+    margin-top: 0;
+    .shop {
+      height: 100%;
+      max-height: 90vh;
+      padding: 30px;
+      overflow: auto;
+    }
+  }
+}
+
+.modal .modal_body, .login_select_wrap {
+  width: 100%;
+  padding: 24px 32px;
+  text-align: center;
+  p.description {
+    padding-bottom: 24px;
+    text-align: center;
+  }
+  p.content_text {
+    font-size: 16px;
+  }
+  .text_container {
+    padding: 32px;
+    background-color: #fff;
+    border-radius: map-get($global-radius, a);
+    .sub_text {
+      padding-top: 24px;
+      font-size: 12px;
+      a, span {
+        color: map-get($global-color, primary);
+        @extend %button-hover;
+      }
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .modal {
+    .modal_header {
+      height: 56px;
+      font-size: 20px
+    }
+    .modal_content {
+      left: 0;
+      width: calc(100% - 24px);
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-top: -210px;
+    }
+    .mode_shop_content {
+      margin-top: 0;
+    }
+    .modal_body {
+      padding: 24px 12px;
+    }
+    .text_container {
+      padding: 24px;
+    }
+    .modal_footer {
+      justify-content: center;
+    }
+  }
+
+  .modal_normal {
+    .modal_content {
+      margin-top: -95px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+-
+  var path_module = path_image + 'footerl_navi/';
+  data.navi =[
+    {
+      "name": "TOP",
+      "link": "/top/top.html?isDev=true",
+      "icon": "home.svg",
+    },
+    {
+      "name": "特集",
+      "link": "/news/list.html?isDev=true",
+      "icon": "news_active.svg",
+    },
+    {
+      "name": "トラベルプラン",
+      "link": "#",
+      "icon": "pin.svg",
+    },
+    {
+      "name": "お得なパス",
+      "link": "#",
+      "icon": "pass.svg",
+    },
+    {
+      "name": "HOW TO",
+      "link": "#",
+      "icon": "how_to.svg",
+    }
+  ]
+-
+<div class="footerl_navi ui-border-t">
+  - for (var i = 0; i < data.navi.length; i++) {
+  - var item = data.navi[i]
+    <a href="#{item.link}" class="item #{i==1 ? 'active' : ''}">
+      <img src="#{path_module + item.icon}" alt="#{item.name}" width="auto" height="23px">
+      <p> #{item.name}</p>
+    </a>
+  -}
+</div>

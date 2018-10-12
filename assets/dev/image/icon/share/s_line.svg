@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Wap_特集_菜单" transform="translate(-325.000000, -1105.000000)">
+            <g id="Group-9" transform="translate(325.000000, 1105.000000)">
+                <g id="line">
+                    <rect id="Rectangle-2-Copy-3" fill="#4EAFF9" opacity="0.6" x="0" y="0" width="66" height="66" rx="33"></rect>
+                    <path d="M34.375484,17.875 C24.5027693,17.875 16.5,24.1667255 16.5,31.9273689 C16.5,39.1362013 23.4080688,45.0735076 32.3035797,45.8823309 C32.6010527,45.9328471 32.86416,46.1045378 33.0300591,46.356152 C33.4249016,47.0054102 33.1442887,48.3887648 32.8377,49.9398622 C32.5310709,51.4907985 34.1983716,50.685923 34.5672381,50.5062158 C34.8609196,50.3639325 42.4184273,46.1089288 46.9177112,41.9363865 C50.2078631,39.387171 52.25,35.8447116 52.25,31.9278523 C52.2511294,24.1667255 44.2477147,17.875 34.375484,17.875 Z" fill="#FFFFFF"></path>
+                    <text id="LINE" font-family="PingFangSC-Semibold, PingFang SC" font-size="12" font-weight="500" fill="#3B75A0">
+                        <tspan x="22" y="37">LINE</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

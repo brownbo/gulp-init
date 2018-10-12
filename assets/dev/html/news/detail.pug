@@ -1,0 +1,131 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "記事名記事名記事名記事名記事名記事名"
+  title
+   =page_name
+  meta(
+    name='keywords'
+    content='keywords'
+  )
+  meta(
+    name='description'
+    content='description'
+  )
+  <meta property="og:title" content="文章的title">
+  <meta property="og:description" content="文章的说明 : 可以空白">
+  <meta property="og:image" content="[絶対path]">
+  <meta property="og:type" content="article" />
+  <meta property="og:url" contetnt="文章的title">
+  <meta property="fb:app_id" content="App ID" />
+  <meta property="article:publisher" content="https://www.facebook.com/NIPPONHODAI" />
+
+block page_option
+  - page_class.push('page_a page_detail')
+  - base_path = '../'
+
+block content
+  -
+    var path_module = path_image + 'news_list/';
+    data.inside_article = [
+        {
+          "title":"このお店は含まれるルート",
+          "swiper":"routeSwiper1",
+          "article":[
+                      {
+                        "text":"ルート_記事_1",
+                        "link":"#"
+                      },
+                      {
+                        "text":"ルート_2",
+                        "link":"#"
+                      },
+                      {
+                        "text":"ルート_3",
+                        "link":"#"
+                      },
+                      {
+                         "text":"ルート_3",
+                         "link":"#"
+                      },
+                    ]
+        },
+        {
+          "title":"このお店は含まれるお得パス",
+          "swiper":"passSwiper1",
+          "article":[
+                      {
+                        "text":"お得パス_記事_1",
+                        "link":"#"
+                      },
+                      {
+                        "text":"お得パス_2",
+                        "link":"#"
+                      },
+                      {
+                        "text":"お得パス_3",
+                        "link":"#"
+                      },
+                    ]
+        },
+        {
+          "title":"関連記事",
+          "swiper":"relateSwiper1",
+          "article":[
+                      {
+                        "text":"関連記事_記事_1",
+                        "link":"#"
+                      },
+                      {
+                        "text":"関連記事_2",
+                        "link":"#"
+                      },
+                      {
+                        "text":"関連記事_3",
+                        "link":"#"
+                      },
+                    ]
+        }
+    ]
+  -
+  +breadcrumb([
+    {
+      name: 'Top',
+      link: 'index.html'
+    },
+    {
+      name: '特集一覧',
+      link: 'news/list.html'
+    },
+    {
+      name: page_name,
+      link: ''
+    }
+  ])
+  .page_content
+    .main_content
+      include ../detail_partical/_detail_main_post
+      include ../detail_partical/_detail_sub_post
+      <!--shop-->
+      section.content.content_sub
+        .wrapper
+          h4.title
+            | 施設情報
+          include  ../detail_partical/_detail_shop
+      include  ../detail_partical/_detail_relation_route&pass
+
+      include ../detail_partical/_detail_summary
+      <!--tag-->
+      include ../detail_partical/_detail_main_tag
+      <!--action-->
+      section.content.content_action
+        .wrapper
+          include ../detail_partical/_detail_action
+      <!--share-->
+      include ../detail_partical/_detail_share
+      <!--comment-->
+      include ../detail_partical/_detail_comment
+      <!--relate post-->
+      section.side_bar.content.show_sp
+        include  ../includes/_rank_side_bar
+    include ../detail_partical/_detail_side_bar
+

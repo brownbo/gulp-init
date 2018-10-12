@@ -1,0 +1,87 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "登録"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a page_news_list page_login')
+  - base_path = '../'
+  - headerType = '2'
+block content
+  .page_content.x_page_content
+    .x_scroll_content.scroll_content
+      .login_cont_wrap
+        form(id="registerForm" onsubmit="javascript: return false;")
+          input(type="hidden" name="thirdPartyId")
+          input(type="hidden" name="userType" value="USER")
+          .register_cont_wrap
+            h2.title_h ユーザー登録
+            .login_portrait_wrap.form_wrap
+              .portrait_img
+                .img_wrap.x_img_wrap
+                  input(type="file" id="x_change_file")
+                  input(type="hidden" name="userImgUrl" id="x_imgUrl_input")
+                i.x_selectImg_plus
+              p.error_text 写真サイズ：縦***横***サイズは2M以内
+            .input_wrap.form_wrap
+              p.title
+                span.title_label 必須
+                | ユーザー名
+              .input_row
+                input(type="text" placeholder="例）David" name="userName" autocomplete="off" check="required" maxlength="50")
+              p.error_text 必須項目です。必ずご入力ください。
+            .input_wrap.form_wrap
+              p.title
+                span.title_label 必須
+                | メールアドレス
+              .input_row
+                input(type="text" placeholder="例) example@hodaiweb.com" name="email" autocomplete="off" check="required email" maxlength="50")
+              p.error_text 必須項目です。必ずご入力ください。
+            .input_wrap.form_wrap
+              p.title
+                span.title_label 必須
+                | パスワード
+              .input_row
+                input(type="password" placeholder="半角英数字8文字以上" name="password" autocomplete="off" check="required compare" minlength="8" maxlength="20")
+              .input_row
+                input(type="password" placeholder="確認のためパスワードをもう一度入力してください" check="required compare" minlength="8" maxlength="20")
+              p.error_text 必須項目です。必ずご入力ください。
+            .login_submit_button.x_submit_button
+              a(href="javascript: void(0);") 登録する
+            .login_link_wrap
+              a(href="#") 個人情報に関して
+          .register_sure_wrap
+            h2.title_h 登録確認
+            .login_portrait_wrap
+              .portrait_img
+                .img_wrap.x_img_portrait_text
+            ul.register_text_wrap
+              li
+                span ユーザー名
+                span.name_text
+              li
+                span メールアドレス
+                span.email_text
+              li
+                span パスワード
+                span.password_text
+            .login_checkbox_wrap
+              input(type="checkbox" name="isAgree" id="isAgree")
+              a(target="_blank") 利用規約
+              | に同意する
+            .login_submit_button
+              input(type="submit" value="登録する" disabled)
+            p
+              a.login_back_link.x_back_submit(href="#") 前の画面へ戻る

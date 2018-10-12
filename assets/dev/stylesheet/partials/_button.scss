@@ -1,0 +1,107 @@
+%button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  line-height: 1;
+  text-align: center;
+  transition: all map-get($global-animation-speed, a) ease-in-out;
+  cursor: pointer;
+  &.primary {
+    color: #fff;
+    background-color: map-get($global-color, primary);
+    border-color: map-get($global-color, primary);
+  }
+  &.secondary {
+    color: map-get($global-color, primary);
+    border-color: map-get($global-color, primary);
+    background-color: #fff;
+  }
+  &.disabled {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: map-get($global-color, secondary);
+    border-color: map-get($global-color, secondary);
+    opacity: .6;
+  }
+  &:hover {
+    opacity: .6;
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  %button {
+    border-width: 1px;
+  }
+}
+
+.button {
+  @extend %button;
+}
+
+.button_group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .button {
+    min-width: 120px;
+    border-color: map-get($global-color, primary);
+    color: map-get($global-color, primary);
+    + .button {
+      margin-left: 16px;
+    }
+  }
+  .button_primary {
+    background-color: map-get($global-color, primary);
+    color: #fff;
+  }
+}
+
+.login_button_wrap {
+  height: 44px;
+  line-height: 44px;
+  border-radius: map_get($global-radius, a);
+  color: #fff;
+  font-size: 14px;
+  a {
+    position: relative;
+    display: block;
+    height: inherit;
+    span {
+      display: inline-block;
+      width: 135px;
+    }
+  }
+  &.fb_wrap {
+    background-color: map-get($global-color, facebook);
+    margin-bottom: 16px;
+    a::before {
+      display: inline-block;
+      content: '';
+      width: 30px;
+      margin-left: -30px;
+      height: inherit;
+      background: url("../image/icon/share/facebook.svg") center no-repeat;
+      background-size: 100%;
+      vertical-align: bottom;
+    }
+  }
+  &.line_wrap {
+    background-color: #00b900;
+    a::before {
+      display: inline-block;
+      content: '';
+      width: 30px;
+      margin-left: -30px;
+      height: inherit;
+      background: url("../image/icon/share/line.png") center no-repeat;
+      background-size: 100%;
+      vertical-align: bottom;
+    }
+  }
+}

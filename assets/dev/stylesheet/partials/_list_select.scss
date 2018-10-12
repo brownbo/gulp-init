@@ -1,0 +1,100 @@
+
+.list_select_wrap, .list_select_com_wrap {
+  display: flex;
+  font-size: 14px;
+  border-radius: map-get($global-radius, a);
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  i {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -9px;
+    width: 8px;
+    height: 18px;
+    background: url(../image/icon/back.svg) center no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
+    transition: all .3s ease;
+  }
+  .select_text {
+    width: 174px;
+    padding: 0 22px;
+    border: 1px solid map-get($global-color, border-grey-select);
+    border-radius: map-get($global-radius, a);
+    @extend %elps
+  }
+  .select_list {
+    position: absolute;
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    top: 39px;
+    left: 0;
+    border: 1px solid map-get($global-color, border-grey-select);
+    border-bottom-left-radius: map-get($global-radius, a);
+    border-bottom-right-radius: map-get($global-radius, a);
+    z-index: 1;
+    li {
+      position: relative;
+      padding: 0 22px;
+      transition: all .2s ease-in-out;
+      height: inherit;
+      @extend %elps
+    }
+    li:hover {
+      color: #4eaff9;
+    }
+    .selected {
+      color: #4eaff9;
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -6px;
+        width: 16px;
+        height: 12px;
+        background: url("../image/icon/selected.svg") center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+.list_select_com_wrap {
+  display: none;
+  border: 1px solid #cfcfcf;
+  font-size: 12px;
+  line-height: 24px;
+  select {
+    width: 90px;
+    display: inline-block;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    padding: 0 15px;
+  }
+}
+.list_show_ul {
+  .select_list {
+    display: block;
+  }
+  i {
+    transform: rotate(270deg);
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .list_select_wrap {
+    display: none;
+  }
+  .list_select_com_wrap {
+    display: flex;
+    i {
+      right: 5px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+-
+  data.map=[
+  {
+    "path": "shadow/01_hokkaido.svg",
+    "title":"Hokkaido",
+    "class": "hokkaido"
+  },
+  {
+    "path": "normal/07_sanyo.svg",
+    "title": "Sanin",
+    "class": "sanyo"
+  },
+  {
+    "path": "shadow/08_sanin.svg",
+    "title": "Sanyo",
+    "class": "sanin"
+  },
+  {
+    "path": "shadow/06_kansai.svg",
+    "title": "Kansai",
+    "class": "kansai"
+  },
+  {
+    "path": "shadow/02_tohoku.svg",
+    "title":"Tohoku",
+    "class": "tohoku"
+  },
+  {
+    "path": "shadow/05_tokai.svg",
+    "title": "Tokai",
+  "class": "tokai"
+  },
+  {
+    "path": "shadow/03_kanto.svg",
+    "title":"Kanto",
+  "class": "kanto"
+  },
+  {
+    "path": "normal/04_hokuriku.svg",
+    "title":"Hokuriku",
+  "class": "hokuriku"
+  },
+  {
+    "path": "shadow/09_shikoku.svg",
+    "title": "Shikoku",
+    "class": "shikoku"
+  },
+  {
+    "path": "shadow/10_kyuusyu.svg",
+    "title": "Kyushu",
+    "class": "kyushu"
+  },
+  {
+    "path": "shadow/11_okinawa.svg",
+    "title": "Okinawa",
+    "class": "okinawa"
+  }
+  ]
+.map_wrap.x_map_wrap
+  .map_item
+    .map_collapse.x_map_collapse
+      img.close_img(src='../image/icon/icon_arrow_up.svg' alt='')
+      span.text_open
+        ='OPEN'
+      span.text_close.hidden
+        ='CLOSE'
+    - for(var i = 0; i< data.map.length; i++){
+    - var item = data.map[i]
+      .cell.x_cell(class=item.class data-value=item.title)
+        img(src='../image/map/'+item.path
+          alt=item.title
+          class="area")
+        .label
+          =item.title
+    - }

@@ -1,0 +1,33 @@
+.tag_list {
+  text-align: center;
+  & > .item {
+    display: inline-block;
+    margin: 0 4px 8px 4px;
+    border: 1px solid map-get($global-color, grey);
+    border-radius: map-get($global-radius, b);
+    font-size: 14px;
+    color: map-get($global-color, grey);
+    overflow: hidden;
+    a {
+      display: block;
+      padding: 6px 10px;
+      transition: all .2s ease-in-out;
+      line-height: 1;
+      &:hover {
+        background: map-get($global-color, grey);
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .tag_list {
+    .item {
+      font-size: 12px;
+      & + .item {
+        margin-left: 10px;
+      }
+    }
+  }
+}

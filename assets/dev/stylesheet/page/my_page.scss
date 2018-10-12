@@ -1,0 +1,325 @@
+.my_page {
+  .header {
+    .bottom {
+      display: none;
+    }
+  }
+  .page_content {
+    .wrapper {
+      @extend %wrapper;
+      position: relative;
+      padding-bottom: 60px;
+      .my_info_wrap {
+        position: absolute;
+        top: 0;
+        left: 16px;
+        width: 425px;
+        z-index: 1;
+        & > a {
+          display: block;
+        }
+      }
+      .my_info_cont {
+        padding: 30px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        border-radius: 6px;
+        .my_info_row {
+          color: #4a4a4a;
+          font-size: 14px;
+          line-height: 26px;
+          margin-bottom: 10px;
+          .title {
+            display: inline-block;
+            width: 100px;
+            color: #000;
+            margin-right: 14px;
+          }
+          span {
+            word-break: break-all;
+          }
+        }
+      }
+      .my_info_name_wrap {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        .my_portrait span {
+          display: inline-block;
+          position: relative;
+          width: 100px;
+          height: 100px;
+          border-radius: 50px;
+          z-index: 1;
+        }
+      }
+      .my_info_btn {
+        display: block;
+        border: 1px solid #4eaff9;
+        border-radius: 12px;
+        color: #4eaff9;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        &:before {
+          content: '';
+          display: inline-block;
+          position: relative;
+          top: -1px;
+          vertical-align: middle;
+          width: 14px;
+          height: 14px;
+          margin-right: 6px;
+          background: url("../image/icon/edit.svg") center center no-repeat;
+          background-size: 100%;
+        }
+      }
+      .my_info_link {
+        text-decoration: underline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 20px;
+        margin-top: 12px;
+        font-size: 14px;
+        color: #4a4a4a;
+        &:before {
+          content: '';
+          display: inline-block;
+          position: relative;
+          top: -1px;
+          vertical-align: middle;
+          width: 18px;
+          height: 20px;
+          margin-right: 6px;
+          background: url("../image/icon/power.svg") center center no-repeat;
+          background-size: 100%;
+        }
+      }
+      .my_center_wrap {
+        position: relative;
+        padding-left: 450px;
+        .list_cell {
+          background-color: #fff;
+          padding: 30px;
+          & + .list_cell {
+            margin-top: 60px;
+          }
+        }
+      }
+      .header_title {
+        margin-bottom: 30px;
+        .cell_title {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-left: 8px solid #4EAFF9;
+          padding-left: 18px;
+          font-size: 20px;
+          height: 24px;
+          line-height: 24px;
+          p {
+            display: flex;
+            align-items: center;
+          }
+          p i {
+            display: inline-block;
+            font-size: 14px;
+            vertical-align: text-top;
+            margin-left: 10px;
+          }
+          a {
+            font-size: 14px;
+            color: #4eaff9;
+            &:after {
+              position: relative;
+              top: 1px;
+              content: '';
+              display: inline-block;
+              width: 13px;
+              height: 13px;
+              margin-left: 3px;
+              background: url("../image/icon/icon_arrow.svg") center center no-repeat;
+              background-size: 100%;
+            }
+          }
+        }
+      }
+
+      .swiper-cont-wrap {
+        position: relative;
+        padding: 0 20px;
+        .swiper-container {
+          overflow: hidden;
+          .swiper-wrapper {
+            .swiper-slide {
+              width: 31.33333%;
+              &:not(:last-child) {
+                margin-right: 3%;
+              }
+              a {
+                display: block;
+                .visual_video_wrap {
+                  margin-right: 0;
+                  border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                  overflow: hidden;
+                }
+                .visual {
+                  width: 100%;
+                  padding-top: 58%;
+                  margin-bottom: 0;
+                }
+                .title {
+                  margin-top: 14px;
+                  font-size: 14px;
+                  color: #4a4a4a;
+                  @extend %elps
+                }
+                .time {
+                  font-size: 12px;
+                  color: #9B9B9B;
+                  line-height: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .swiper-button-next {
+        top: 50%;
+        right: 0;
+        width: 13px;
+        background: url("../image/icon/my_swiper.png") center center no-repeat;
+        background-size: 100%;
+        transform: translateY(-22px) rotate(180deg);
+      }
+      .swiper-button-prev {
+        top: 50%;
+        transform: translateY(-22px);
+        left: 0;
+        width: 13px;
+        background: url("../image/icon/my_swiper.png") center center no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .my_page {
+    .breadcrumb {
+      display: block;
+    }
+    .header {
+      .wrapper {
+        background: linear-gradient(to bottom, #4EAFF9, #16D8F2);
+      }
+    }
+    .page_content {
+      padding-top: 54px;
+      height: calc(100% - 60px);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      .breadcrumb {
+        .breadcrumb_list {
+          font-size: 14px;
+        }
+      }
+      .wrapper {
+        padding: 0;
+        .header_title {
+          .cell_title {
+            font-size: 15px;
+            border-left: 4px solid #4EAFF9;
+            height: 20px;
+            line-height: 20px;
+            p i {
+              font-size: 12px;
+            }
+          }
+        }
+        .swiper-button-next, .swiper-button-prev {
+          display: none;
+        }
+        .swiper-cont-wrap {
+          padding: 0;
+          .swiper-container .swiper-wrapper .swiper-slide {
+            width: calc(50% - 20px);
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+          }
+        }
+        .my_info_wrap {
+          position: relative;
+          left: 0;
+          width: auto;
+          & > a {
+            display: none;
+          }
+          .my_info_cont {
+            margin: 0 20px;
+            background-color: transparent;
+            padding: 0;
+            .my_info_text {
+              background-color: #fff;
+              padding: 20px;
+            }
+            .my_info_link {
+              text-align: right;
+              margin-bottom: 30px;
+            }
+            .my_info_btn {
+              display: inline-block;
+              position: absolute;
+              text-decoration: underline;
+              top: -50px;
+              right: 20px;
+              height: 30px;
+              border: none;
+              font-weight: normal;
+            }
+            .my_info_row {
+              span {
+                display: block;
+              }
+            }
+          }
+        }
+        .my_center_wrap {
+          padding: 0;
+          .list_cell {
+            padding: 10px;
+            &+.list_cell {
+              margin-top: 28px;
+            }
+          }
+        }
+        .my_info_name_wrap {
+          position: relative;
+          .my_portrait span {
+            width: 60px;
+            height: 60px;
+          }
+          .my_portrait:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #e5e5e5;
+            z-index: 0;
+          }
+        }
+      }
+    }
+  }
+}

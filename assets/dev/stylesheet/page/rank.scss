@@ -1,0 +1,21 @@
+.page_rank {
+  .item_a {
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      width: calc(100% - 24px);
+      .visual {
+        height: 440px;
+      }
+    }
+  }
+  .action_item{
+    height: 24px;
+  }
+}
+
+@include break_point(map-get($global-width, break-point-b)) {
+  .page_rank {
+    .item_a {
+      width: 50%;
+    }
+  }
+}

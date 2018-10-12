@@ -1,0 +1,120 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "お気に入り記事"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a my_page')
+  - base_path = '../'
+block content
+  -
+    var path_module = path_image + 'news_list/';
+    data.inside_article = [
+      {
+        "title":"このお店は含まれるルート",
+        "swiper":"routeSwiper1",
+        "article":[
+          {
+            "text":"ルート_記事_1",
+            "link":"#"
+          },
+          {
+            "text":"ルート_2",
+            "link":"#"
+          },
+          {
+            "text":"ルート_3",
+            "link":"#"
+          },
+          {
+            "text":"ルート_3",
+            "link":"#"
+          },
+        ]
+      },
+      {
+        "title":"このお店は含まれるお得パス",
+        "swiper":"passSwiper1",
+        "article":[
+          {
+            "text":"お得パス_記事_1",
+            "link":"#"
+          },
+          {
+            "text":"お得パス_2",
+            "link":"#"
+          },
+          {
+            "text":"お得パス_3",
+            "link":"#"
+          },
+        ]
+      },
+      {
+        "title":"関連記事",
+        "swiper":"relateSwiper1",
+        "article":[
+          {
+            "text":"関連記事_記事_1",
+            "link":"#"
+          },
+          {
+            "text":"関連記事_2",
+            "link":"#"
+          },
+          {
+            "text":"関連記事_3",
+            "link":"#"
+          },
+        ]
+      }
+    ]
+  -
+  .page_content.x_page_content
+    .x_scroll_content.scroll_content
+      -
+      +breadcrumb([
+        {
+          name: 'Top',
+          link: 'top/top.html'
+        },
+        {
+          name: 'マイページ ',
+          link: 'my_page/my_center.html'
+        },
+        {
+          name: page_name,
+          link: ''
+        }
+      ])
+      -
+      .wrapper.my_list_wrap.x_news_list
+        p.my_list_num 全て ：
+          span.x_total_count 123
+          | 件
+        .my_list_title
+          p=page_name
+          .my_btn_wrap
+            .edit_wrap
+              span.edit_btn.x_edit_btn 編集
+              +list_select([{value: 'upDt,desc', name: '新着順'}, {value: 'followDt,desc', name: 'いいね順'}])
+            .delete_wrap
+              span.cancel_btn.x_cancel_btn キャンセル
+              span.delete_btn.x_delete_btn 削除
+
+        .content_body
+          ul.news_list.x_render_parent
+    +modalShop()
+

@@ -1,2 +1,9 @@
-# gulp-init
-使用gulp完成前端页面编辑
+# static page cli
+
+yarn/  npm install
+
+npm start for dev
+
+npm build for pro
+
+localhost:3000/

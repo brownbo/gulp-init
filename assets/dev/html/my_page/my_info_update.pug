@@ -1,0 +1,86 @@
+extends ../layouts/_default.pug
+block meta
+  - var page_name = "基本情報編集"
+  title
+    =page_name
+  meta(
+  name='keywords'
+  content='keywords'
+  )
+  meta(
+  name='description'
+  content='description'
+  )
+  meta(
+  name='language'
+  content='en'
+  )
+block page_option
+  - page_class.push('page_a my_page')
+  - base_path = '../'
+block content
+  .page_content.x_page_content
+    .x_scroll_content.scroll_content
+      -
+      +breadcrumb([
+        {
+          name: 'Top',
+          link: 'index.html'
+        },
+        {
+          name: 'マイページ',
+          link: 'my_center.html'
+        },
+        {
+          name: page_name,
+          link: ''
+        }
+      ])
+      -
+      .login_cont_wrap
+        h2.title_h
+          = page_name
+        form(id="updateInfoForm" action="/")
+          .login_portrait_wrap.form_wrap
+            .portrait_img
+              .img_wrap.x_img_wrap
+                input(type="file" id="x_change_file")
+                input(type="hidden" name="userImgUrl" id="x_imgUrl_input")
+              i.x_selectImg_plus
+            p.error_text 写真サイズ：縦***横***サイズは2M以内
+          .input_wrap.form_wrap
+            p.title
+              span.title_label 必須
+              | ユーザー名
+            .input_row
+              input(type="text" name="username" placeholder="例）David" value="David" check="required" autocomplete="off")
+            p.error_text 必須項目です。必ずご入力ください。
+          .input_wrap
+            p.title メールアドレス
+            .input_row
+              input(type="text" disabled placeholder="例) example@hodaiweb.com" value="example@hodaiweb.com" autocomplete="off" check="required email")
+            .input_link_row
+              a(href="/my_page/my_email_up.html") メールアドレスを変更する
+          .input_wrap
+            p.title パスワード
+            .input_link_row
+              a(href="/my_page/my_pw_update.html") パスワードを変更する
+          .input_wrap.form_wrap
+            p.title 出身国・地域
+            .input_row.select_wrap.x_select_wrap
+              input(type="hidden" name="address" value="1" id="address")
+              input(placeholder="出身国・地域を選択してください" autocomplete="off" id="x_select_input")
+              ul.x_select_ul
+              i.x_select_label
+            p.error_text 必須項目です。必ずご入力ください。
+          .input_wrap.form_wrap
+            p.title 説明文
+            .input_row.textarea_wrap
+              textarea(placeholder="説明文を記入する" name="text" autocomplete="off" maxlength="100" id="userText") 2014年来日。留学、就職、2016年個人創業、株式会社TOMOTOMO設立された。今は日本で頑張りたいと思います。
+              p
+                i.x_textarea_length 0
+                span /
+                i.x_textarea_allLen 100
+            p.error_text 必須項目です。必ずご入力ください。
+          .login_submit_button
+            input(type="submit" value="変更する")

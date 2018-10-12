@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>line</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC_-お得パス详情" transform="translate(-1093.000000, -458.000000)">
+            <g id="追踨日本放题-" transform="translate(893.000000, 371.000000)">
+                <g id="Group-19" transform="translate(200.000000, 87.000000)">
+                    <g id="line">
+                        <rect id="Rectangle-2-Copy-3" fill="#000000" opacity="0.800000012" x="0" y="0" width="44" height="44" rx="22"></rect>
+                        <path d="M21.9169893,11.9166667 C15.3351795,11.9166667 10,16.1111503 10,21.2849126 C10,26.0908008 14.6053792,30.0490051 20.5357198,30.5882206 C20.7340351,30.6218981 20.90944,30.7363585 21.0200394,30.9041014 C21.2832677,31.3369401 21.0961925,32.2591765 20.8918,33.2932415 C20.6873806,34.327199 21.7989144,33.7906153 22.0448254,33.6708105 C22.2406131,33.575955 27.2789515,30.7392858 30.2784741,27.957591 C32.4719088,26.258114 33.8333333,23.8964744 33.8333333,21.2852349 C33.8340863,16.1111503 28.4984765,11.9166667 21.9169893,11.9166667 Z" fill="#FFFFFF"></path>
+                        <text id="LINE" font-family="PingFangSC-Semibold, PingFang SC" font-size="8" font-weight="500" fill="#333333">
+                            <tspan x="13" y="25">LINE</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
